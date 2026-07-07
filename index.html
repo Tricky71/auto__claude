@@ -92,7 +92,20 @@
   <main class="page__main">
 
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__bg" role="img" aria-label="Премиальный автомобиль на фоне города"></div>
+      <div class="hero__bg">
+        <video
+          class="hero__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1280&q=80"
+          aria-hidden="true"
+        >
+          <source src="video/hero.mp4" type="video/mp4">
+        </video>
+      </div>
       <div class="hero__overlay"></div>
 
       <div class="hero__content container">

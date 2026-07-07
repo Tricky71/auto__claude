@@ -609,6 +609,42 @@
     });
   });
 
+  /* Hero background video */
+  function initHeroVideo() {
+    const video = document.querySelector('.hero__video');
+    if (!video) return;
+
+    function tryPlay() {
+      const playPromise = video.play();
+      if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch(function () {});
+      }
+    }
+
+    if (video.readyState >= 2) {
+      tryPlay();
+    } else {
+      video.addEventListener('loadeddata', tryPlay, { once: true });
+    }
+
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    function handleMotionPreference() {
+      if (motionQuery.matches) {
+        video.pause();
+        return;
+      }
+
+      tryPlay();
+    }
+
+    if (typeof motionQuery.addEventListener === 'function') {
+      motionQuery.addEventListener('change', handleMotionPreference);
+    }
+
+    handleMotionPreference();
+  }
+
   /* Header background on scroll */
   function initHeaderScroll() {
     const header = document.querySelector('.header');
@@ -624,6 +660,7 @@
 
   initCatalogSlider();
   initProcessSlider();
+  initHeroVideo();
   initPhoneMask();
   initForm();
   initHeaderScroll();
