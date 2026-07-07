@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS AUTO — Премиум авто из-за границы с доставкой до вашей двери</title>
+  <meta name="description" content="Подберём и проверим авто из Кореи, Китая, Германии, ОАЭ, США, Японии. С гарантией лучшей цены и прозрачной истории.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page">
+
+  <header class="header">
+    <div class="header__inner container">
+      <a href="#" class="logo header__logo" aria-label="NEXUS AUTO — на главную">
+        <svg class="logo__icon" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M16 2L4 10v12l12 8 12-8V10L16 2z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <path d="M16 8l-6 4v8l6 4 6-4v-8l-6-4z" fill="currentColor"/>
+        </svg>
+        <span class="logo__text">NEXUS</span>
+      </a>
+
+      <nav class="nav header__nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="#catalog">Авто</a></li>
+          <li class="nav__item"><a class="nav__link" href="#about">О нас</a></li>
+          <li class="nav__item"><a class="nav__link" href="#reviews">Отзывы</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="btn btn--outline header__cta">Связаться</a>
+
+      <button class="header__burger burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="burger__icon" aria-hidden="true">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <button class="mobile-menu__overlay" type="button" aria-label="Закрыть меню" tabindex="-1"></button>
+
+    <aside class="mobile-menu__panel">
+      <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">
+        <svg width="24" height="24" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <div class="mobile-menu__head">
+        <a href="#" class="logo mobile-menu__logo" aria-label="NEXUS AUTO — на главную">
+          <svg class="logo__icon" width="40" height="40" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="M16 2L4 10v12l12 8 12-8V10L16 2z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <path d="M16 8l-6 4v8l6 4 6-4v-8l-6-4z" fill="currentColor"/>
+          </svg>
+          <span class="logo__text">NEXUS</span>
+        </a>
+      </div>
+
+      <nav class="mobile-menu__nav" aria-label="Мобильная навигация">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#catalog">Подобранные авто</a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#process">Преимущества</a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#about">Обо мне</a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#reviews">Отзывы</a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#contact">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="mobile-menu__footer">
+        <p class="mobile-menu__address">г. Москва, ул. Автомобильная, д. 15, офис 302</p>
+
+        <div class="mobile-menu__socials">
+          <a class="mobile-menu__social" href="https://wa.me/79001234567" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.881 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a class="mobile-menu__social" href="https://t.me/nexusauto" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+          </a>
+        </div>
+
+        <a href="#contact" class="btn btn--outline mobile-menu__cta">Связаться</a>
+      </div>
+    </aside>
+  </div>
+
+  <main class="page__main">
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__bg" role="img" aria-label="Премиальный автомобиль на фоне города"></div>
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content container">
+        <h1 class="hero__title" id="hero-title">Премиум авто из-за границы с&nbsp;доставкой до&nbsp;вашей двери</h1>
+        <p class="hero__text">Подберём и проверим авто из Кореи, Китая, Германии, ОАЭ, США, Японии, Италии. С гарантией лучшей цены и прозрачной истории.</p>
+        <a href="#catalog" class="btn btn--primary hero__btn">Подобрать автомобиль</a>
+      </div>
+
+      <div class="features hero__features">
+        <ul class="features__list container">
+          <svg class="features__defs" width="0" height="0" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="features-num-gradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="currentColor" stop-opacity="0.45"/>
+                <stop offset="100%" stop-color="currentColor" stop-opacity="0.85"/>
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <li class="features__item">
+            <span class="features__num" aria-hidden="true">
+              <svg class="features__num-icon" viewBox="0 0 72 56" aria-hidden="true">
+                <text x="2" y="44" class="features__num-text">01</text>
+              </svg>
+            </span>
+            <span class="features__label">Постановка<br>на учет</span>
+          </li>
+          <li class="features__item">
+            <span class="features__num" aria-hidden="true">
+              <svg class="features__num-icon" viewBox="0 0 72 56" aria-hidden="true">
+                <text x="2" y="44" class="features__num-text">02</text>
+              </svg>
+            </span>
+            <span class="features__label">Русификация<br>и ТО</span>
+          </li>
+          <li class="features__item">
+            <span class="features__num" aria-hidden="true">
+              <svg class="features__num-icon" viewBox="0 0 72 56" aria-hidden="true">
+                <text x="2" y="44" class="features__num-text">03</text>
+              </svg>
+            </span>
+            <span class="features__label">Детейлинг</span>
+          </li>
+          <li class="features__item">
+            <span class="features__num" aria-hidden="true">
+              <svg class="features__num-icon" viewBox="0 0 72 56" aria-hidden="true">
+                <text x="2" y="44" class="features__num-text">04</text>
+              </svg>
+            </span>
+            <span class="features__label features__label--mobile">Кредит или<br>лизинг</span>
+            <span class="features__label features__label--desktop">Работа по<br>договору</span>
+          </li>
+          <li class="features__item features__item--desktop">
+            <span class="features__num" aria-hidden="true">
+              <svg class="features__num-icon" viewBox="0 0 72 56" aria-hidden="true">
+                <text x="2" y="44" class="features__num-text">05</text>
+              </svg>
+            </span>
+            <span class="features__label">Кредит или<br>лизинг</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="catalog section" id="catalog" aria-labelledby="catalog-title">
+      <div class="container">
+        <h2 class="section__title catalog__title" id="catalog-title">Автомобили в наличии</h2>
+
+        <div class="catalog__slider slider" data-slider="catalog">
+          <div class="slider__track catalog__track">
+            <article class="car-card catalog__card">
+              <div class="car-card__image-wrap">
+                <img class="car-card__image" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80" alt="Porsche 911 Carrera 4" width="400" height="260" loading="lazy">
+              </div>
+              <div class="car-card__body">
+                <h3 class="car-card__title">Porsche 911 Carrera 4</h3>
+                <dl class="car-card__specs">
+                  <div class="car-card__spec">
+                    <dt class="car-card__spec-label">Пробег</dt>
+                    <dd class="car-card__spec-value">12 400 км</dd>
+                  </div>
+                  <div class="car-card__spec">
+                    <dt class="car-card__spec-label">Год</dt>
+                    <dd class="car-card__spec-value">2023</dd>
+                  </div>
+                </dl>
+                <button class="btn btn--card car-card__btn" type="button">Запросить подробности</button>
+              </div>
+            </article>
+
+            <article class="car-card catalog__card">
+              <div class="car-card__image-wrap">
+                <img class="car-card__image" src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80" alt="Mercedes-Benz GLE 450" width="400" height="260" loading="lazy">
+              </div>
+              <div class="car-card__body">
+                <h3 class="car-card__title">Mercedes-Benz GLE 450</h3>
+                <dl class="car-card__specs">
+                  <div class="car-card__spec">
+                    <dt class="car-card__spec-label">Пробег</dt>
+                    <dd class="car-card__spec-value">28 100 км</dd>
+                  </div>
+                  <div class="car-card__spec">
+                    <dt class="car-card__spec-label">Год</dt>
+                    <dd class="car-card__spec-value">2022</dd>
+                  </div>
+                </dl>
+                <button class="btn btn--card car-card__btn" type="button">Запросить подробности</button>
+              </div>
+            </article>
+
+            <article class="car-card catalog__card">
+              <div class="car-card__image-wrap">
+                <img class="car-card__image" src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80" alt="BMW M4 Competition" width="400" height="260" loading="lazy">
+              </div>
+              <div class="car-card__body">
+                <h3 class="car-card__title">BMW M4 Competition</h3>
+                <dl class="car-card__specs">
+                  <div class="car-card__spec">
+                    <dt class="car-card__spec-label">Пробег</dt>
+                    <dd class="car-card__spec-value">8 750 км</dd>
+                  </div>
+                  <div class="car-card__spec">
+                    <dt class="car-card__spec-label">Год</dt>
+                    <dd class="car-card__spec-value">2024</dd>
+                  </div>
+                </dl>
+                <button class="btn btn--card car-card__btn" type="button">Запросить подробности</button>
+              </div>
+            </article>
+
+            <article class="car-card catalog__card">
+              <div class="car-card__image-wrap">
+                <img class="car-card__image" src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80" alt="Audi RS6 Avant" width="400" height="260" loading="lazy">
+              </div>
+              <div class="car-card__body">
+                <h3 class="car-card__title">Audi RS6 Avant</h3>
+                <dl class="car-card__specs">
+                  <div class="car-card__spec">
+                    <dt class="car-card__spec-label">Пробег</dt>
+                    <dd class="car-card__spec-value">15 200 км</dd>
+                  </div>
+                  <div class="car-card__spec">
+                    <dt class="car-card__spec-label">Год</dt>
+                    <dd class="car-card__spec-value">2023</dd>
+                  </div>
+                </dl>
+                <button class="btn btn--card car-card__btn" type="button">Запросить подробности</button>
+              </div>
+            </article>
+
+            <article class="car-card catalog__card">
+              <div class="car-card__image-wrap">
+                <img class="car-card__image" src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=800&q=80" alt="Range Rover Sport" width="400" height="260" loading="lazy">
+              </div>
+              <div class="car-card__body">
+                <h3 class="car-card__title">Range Rover Sport</h3>
+                <dl class="car-card__specs">
+                  <div class="car-card__spec">
+                    <dt class="car-card__spec-label">Пробег</dt>
+                    <dd class="car-card__spec-value">21 600 км</dd>
+                  </div>
+                  <div class="car-card__spec">
+                    <dt class="car-card__spec-label">Год</dt>
+                    <dd class="car-card__spec-value">2022</dd>
+                  </div>
+                </dl>
+                <button class="btn btn--card car-card__btn" type="button">Запросить подробности</button>
+              </div>
+            </article>
+
+            <article class="car-card catalog__card">
+              <div class="car-card__image-wrap">
+                <img class="car-card__image" src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80" alt="Lexus LX 600" width="400" height="260" loading="lazy">
+              </div>
+              <div class="car-card__body">
+                <h3 class="car-card__title">Lexus LX 600</h3>
+                <dl class="car-card__specs">
+                  <div class="car-card__spec">
+                    <dt class="car-card__spec-label">Пробег</dt>
+                    <dd class="car-card__spec-value">9 300 км</dd>
+                  </div>
+                  <div class="car-card__spec">
+                    <dt class="car-card__spec-label">Год</dt>
+                    <dd class="car-card__spec-value">2024</dd>
+                  </div>
+                </dl>
+                <button class="btn btn--card car-card__btn" type="button">Запросить подробности</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="slider__dots catalog__dots" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="about" aria-labelledby="about-title">
+      <div class="container about__inner">
+        <div class="about__content">
+          <span class="about__label">Обо мне</span>
+          <h2 class="section__title about__title" id="about-title">Доверие и скорость</h2>
+
+          <div class="about__image-wrap">
+            <img class="about__image" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=600&q=80" alt="Основатель компании NEXUS AUTO" width="480" height="640" loading="lazy">
+          </div>
+
+          <div class="about__stats">
+            <div class="about__stat">
+              <span class="about__stat-value">8+ лет</span>
+              <span class="about__stat-label">Стаж работы</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-value">450+</span>
+              <span class="about__stat-label">Продано авто</span>
+            </div>
+          </div>
+
+          <div class="about__text">
+            <p>Я лично занимаюсь подбором, проверкой и доставкой автомобилей из-за рубежа. Каждая сделка проходит через прозрачный договор — без посредников и скрытых комиссий.</p>
+            <p>Работаю с проверенными аукционами и дилерами в Корее, Китае, Германии и ОАЭ. Вы получаете авто с полной историей, юридической чистотой и гарантией лучшей цены на рынке.</p>
+          </div>
+
+          <a href="#contact" class="btn btn--primary about__btn">Связаться со мной</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="process section" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <h2 class="section__title process__title" id="process-title">Работаю из первых рук</h2>
+        <p class="process__subtitle">Без посредников — вы общаетесь напрямую с человеком, который отвечает за каждый этап сделки</p>
+
+        <div class="process__slider slider" data-slider="process">
+          <div class="slider__controls process__controls">
+            <button class="slider__arrow slider__arrow--prev process__arrow process__arrow--prev" type="button" aria-label="Предыдущий слайд">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M12 4l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="slider__arrow slider__arrow--next process__arrow process__arrow--next" type="button" aria-label="Следующий слайд">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M8 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+
+          <div class="slider__track process__track">
+            <article class="process-card process__card">
+              <span class="process-card__num">01</span>
+              <h3 class="process-card__title">Общаемся лично со мной</h3>
+              <p class="process-card__text">Никаких менеджеров-перекупщиков. Вы напрямую обсуждаете бюджет, пожелания и сроки с человеком, который ведёт сделку.</p>
+            </article>
+            <article class="process-card process__card">
+              <span class="process-card__num">02</span>
+              <h3 class="process-card__title">Экспертный подбор</h3>
+              <p class="process-card__text">Анализирую аукционы, проверяю VIN, историю ДТП и сервисное обслуживание. Предлагаю только проверенные варианты.</p>
+            </article>
+            <article class="process-card process__card">
+              <span class="process-card__num">03</span>
+              <h3 class="process-card__title">Полный цикл доставки</h3>
+              <p class="process-card__text">От покупки за рубежом до постановки на учёт в России — один договор, одна ответственность, прозрачная смета.</p>
+            </article>
+            <article class="process-card process__card">
+              <span class="process-card__num">04</span>
+              <h3 class="process-card__title">Гарантия лучшей цены</h3>
+              <p class="process-card__text">Если найдёте аналогичное авто дешевле с теми же условиями — вернём разницу или улучшим предложение.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews section" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <h2 class="section__title reviews__title" id="reviews-title">Отзывы моих клиентов</h2>
+
+        <div class="reviews__slider slider" data-slider="reviews">
+          <div class="slider__track reviews__track">
+            <article class="review-card reviews__card">
+              <div class="review-card__media">
+                <img class="review-card__image" src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&q=80" alt="Клиент с Kia Seltos" width="220" height="360" loading="lazy">
+                <button class="review-card__play" type="button" aria-label="Смотреть отзыв">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+              </div>
+              <div class="review-card__info">
+                <span class="review-card__name">Екатерина</span>
+                <span class="review-card__car">Kia Seltos</span>
+              </div>
+            </article>
+
+            <article class="review-card reviews__card">
+              <div class="review-card__media">
+                <img class="review-card__image" src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&q=80" alt="Клиент с Chevrolet Camaro" width="220" height="360" loading="lazy">
+                <button class="review-card__play" type="button" aria-label="Смотреть отзыв">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+              </div>
+              <div class="review-card__info">
+                <span class="review-card__name">Алексей</span>
+                <span class="review-card__car">Chevrolet Camaro</span>
+              </div>
+            </article>
+
+            <article class="review-card reviews__card">
+              <div class="review-card__media">
+                <img class="review-card__image" src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=400&q=80" alt="Клиент с Porsche Cayenne" width="220" height="360" loading="lazy">
+                <button class="review-card__play" type="button" aria-label="Смотреть отзыв">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+              </div>
+              <div class="review-card__info">
+                <span class="review-card__name">Дмитрий</span>
+                <span class="review-card__car">Porsche Cayenne</span>
+              </div>
+            </article>
+
+            <article class="review-card reviews__card">
+              <div class="review-card__media">
+                <img class="review-card__image" src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&q=80" alt="Bentley Continental" width="220" height="360" loading="lazy">
+                <button class="review-card__play" type="button" aria-label="Смотреть отзыв">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+              </div>
+              <div class="review-card__info">
+                <span class="review-card__name">Марина</span>
+                <span class="review-card__car">Bentley Continental</span>
+              </div>
+            </article>
+
+            <article class="review-card reviews__card">
+              <div class="review-card__media">
+                <img class="review-card__image" src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=400&q=80" alt="Клиент с Tesla Model Y" width="220" height="360" loading="lazy">
+                <button class="review-card__play" type="button" aria-label="Смотреть отзыв">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+              </div>
+              <div class="review-card__info">
+                <span class="review-card__name">Игорь</span>
+                <span class="review-card__car">Tesla Model Y</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact__header">
+          <h2 class="section__title contact__title" id="contact-title">Остались вопросы?</h2>
+        </div>
+
+        <div class="contact__inner">
+          <form class="form contact__form" id="contact-form" novalidate>
+            <p class="contact__subtitle">Оставьте контактные данные — мы свяжемся с вами в течение 30 минут</p>
+
+            <div class="form__field">
+              <label class="form__label visually-hidden" for="phone">Телефон</label>
+              <div class="form__phone">
+                <span class="form__flag" aria-hidden="true">🇷🇺</span>
+                <input class="form__input" type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+              </div>
+            </div>
+
+            <label class="form__checkbox">
+              <input class="form__checkbox-input" type="checkbox" name="agree" required>
+              <span class="form__checkbox-text">Я согласен с <a href="#" class="form__link">политикой конфиденциальности</a></span>
+            </label>
+
+            <button class="btn btn--submit form__submit" type="submit">Отправить</button>
+          </form>
+
+          <div class="contact__grid">
+            <div class="contact__info">
+              <a class="contact__phone" href="tel:+79001234567">+7 (900) 123-45-67</a>
+
+              <div class="contact__messengers">
+                <a class="contact__messenger" href="https://t.me/nexusauto" target="_blank" rel="noopener noreferrer">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                  Telegram
+                </a>
+                <a class="contact__messenger" href="https://wa.me/79001234567" target="_blank" rel="noopener noreferrer">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.881 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <div class="contact__address">
+              <p class="contact__address-text">г. Москва, ул. Автомобильная, д. 15, офис 302</p>
+              <p class="contact__hours">Пн–Пт: 10:00–19:00<br>Сб: 11:00–16:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <nav class="footer__nav footer__nav--left" aria-label="Навигация в подвале">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#catalog">Авто</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#about">О нас</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#reviews">Отзывы</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__nav footer__nav--right" aria-label="Дополнительная навигация">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#process">Преимущества</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#contact">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__legal">
+        <p class="footer__legal-text">ИНН 7701234567 · ОГРН 1234567890123</p>
+        <p class="footer__legal-text">© 2026 NEXUS AUTO. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
