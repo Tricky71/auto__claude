@@ -14,6 +14,7 @@
     const header = document.querySelector('.header');
     let scrollPosition = 0;
     let isClosing = false;
+    let pendingScrollTarget = null;
     const MENU_TRANSITION_MS = 350;
 
     function getScrollbarWidth() {
@@ -70,6 +71,14 @@
       menu.setAttribute('aria-hidden', 'true');
       isClosing = false;
       unlockScroll();
+
+      if (pendingScrollTarget) {
+        const target = pendingScrollTarget;
+        pendingScrollTarget = null;
+        window.requestAnimationFrame(function () {
+          scrollToTarget(target);
+        });
+      }
     }
 
     function closeMenu() {
@@ -112,8 +121,31 @@
     if (closeBtn) closeBtn.addEventListener('click', closeMenu);
     if (overlay) overlay.addEventListener('click', closeMenu);
 
+    function scrollToTarget(target) {
+      const headerHeight = header ? header.getBoundingClientRect().height : 0;
+      const top = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+      window.scrollTo({
+        top: Math.max(0, top),
+        behavior: 'smooth'
+      });
+    }
+
     menu.querySelectorAll('.mobile-menu__link, .mobile-menu__cta').forEach(function (link) {
-      link.addEventListener('click', closeMenu);
+      link.addEventListener('click', function (e) {
+        const href = link.getAttribute('href') || '';
+
+        if (href.charAt(0) === '#' && href.length > 1) {
+          const target = document.getElementById(href.slice(1));
+
+          if (target) {
+            e.preventDefault();
+            pendingScrollTarget = target;
+          }
+        }
+
+        closeMenu();
+      });
     });
 
     document.addEventListener('keydown', function (e) {
