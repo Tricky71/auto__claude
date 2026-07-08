@@ -538,8 +538,10 @@ ul {
 .hero__video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 40%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center 40%;
+     object-position: center 40%;
   background-color: #000;
 }
 
@@ -740,7 +742,8 @@ ul {
 .car-card__image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: transform 0.4s ease;
 }
 
@@ -813,7 +816,8 @@ ul {
   max-width: 530px;
   width: 100%;
   aspect-ratio: 3 / 4;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .about__stats {
@@ -944,7 +948,8 @@ ul {
 .review-card__image {
   width: 100%;
   aspect-ratio: 9 / 16;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .review-card__play {
@@ -1104,6 +1109,10 @@ ul {
   color: var(--color-text);
   font-family: inherit;
   font-size: 15px;
+}
+
+.form__input::-moz-placeholder {
+  color: var(--color-text-dim);
 }
 
 .form__input::placeholder {
